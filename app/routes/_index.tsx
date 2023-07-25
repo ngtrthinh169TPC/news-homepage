@@ -30,7 +30,7 @@ export default function Index() {
           src='images/image-web-3-mobile.jpg'
           alt='web-3-mobile'
         />
-        <div className='bg-very-dark-blue h-fit flex flex-col row-span-2 p-8 mt-12'>
+        <div className='bg-very-dark-blue h-fit flex flex-col row-span-2 p-8 mt-12 xl:mt-0'>
           <h2 className='text-soft-orange font-bold text-4xl mb-2'>
             New articles
           </h2>

@@ -6,3 +6,9 @@
   font-family: "inter";
   src: url("../public/fonts/Inter/Inter-VariableFont_slnt,wght.ttf");
 }
+html {
+  font-size: 14px;
+  @screen lg {
+    font-size: 16px;
+  }
+}
