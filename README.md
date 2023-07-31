@@ -1,6 +1,6 @@
 ## TODO:
 
-- Hover states
+- Add links to articles
 - Mobile navbar
 - Refactor: divide into components
 
