@@ -1,9 +1,11 @@
+import type { Article } from "~/types/Hero.types";
+
 export const heroTitle = "The Bright Future of Web 3.0?";
 
 export const heroContent =
   "We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?";
 
-export const newArticles = [
+export const newArticles: Article[] = [
   {
     title: "Hydrogen vs. Electric Cars",
     brief: "Will hydrogen-fueled cars ever catch up to EVs?",

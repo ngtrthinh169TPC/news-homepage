@@ -1,6 +1,6 @@
 import { type V2_MetaFunction } from "@remix-run/node";
-import React from "react";
-import Header from "~/components/header";
+import Header from "~/components/Header";
+import HeroNews from "~/components/HeroSection/HeroNews";
 import {
   heroContent,
   heroTitle,
@@ -30,30 +30,13 @@ export default function Index() {
           src='images/image-web-3-mobile.jpg'
           alt='web-3-mobile'
         />
-        <div className='bg-very-dark-blue h-fit flex flex-col row-span-2 p-8 mt-12 xl:mt-0'>
-          <h2 className='text-soft-orange font-bold text-4xl mb-2'>
-            New articles
-          </h2>
-          {newArticles.map((article, index) => {
-            return (
-              <React.Fragment key={`new-article-${index}`}>
-                {index > 0 ? <hr className='border-grayish-blue' /> : null}
-                <div className='my-6'>
-                  <h3 className='text-off-white font-bold text-xl mb-2.5'>
-                    {article.title}
-                  </h3>
-                  <p className='text-grayish-blue'>{article.brief}</p>
-                </div>
-              </React.Fragment>
-            );
-          })}
-        </div>
+        <HeroNews data={newArticles} />
         <h3 className='text-4xl xl:text-6xl font-extrabold row-start-2 xl:row-start-auto'>
           {heroTitle}
         </h3>
         <div className='flex flex-col justify-between row-start-3 xl:row-start-auto'>
           <p className='text-dark-grayish-blue'>{heroContent}</p>
-          <button className='bg-soft-red text-off-white mt-8 px-8 py-4 w-fit text-sm font-semibold tracking-[0.5em]'>
+          <button className='bg-soft-red hover:bg-very-dark-blue text-off-white mt-8 px-8 py-4 w-fit text-sm font-semibold tracking-[0.5em]'>
             READ MORE
           </button>
         </div>
@@ -70,7 +53,9 @@ export default function Index() {
                   <h2 className='text-6xl font-bold text-grayish-blue mb-4'>
                     {article.index}
                   </h2>
-                  <h3 className='font-bold text-xl mb-2'>{article.title}</h3>
+                  <h3 className='font-bold text-xl mb-2 hover:text-soft-red'>
+                    {article.title}
+                  </h3>
                   <p>{article.brief}</p>
                 </div>
               </div>
