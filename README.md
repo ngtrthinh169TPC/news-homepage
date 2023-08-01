@@ -1,6 +1,6 @@
 ## TODO:
 
-- Add links to articles
+- Add temp pages for navbar
 - Mobile navbar
 - Refactor: divide into components
 

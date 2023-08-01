@@ -1,3 +1,4 @@
+import { Link } from "@remix-run/react";
 import React from "react";
 import type { Article } from "~/types/Hero.types";
 
@@ -10,9 +11,11 @@ export default function HeroNews(props: { data: Article[] }) {
           <React.Fragment key={`new-article-${index}`}>
             {index > 0 ? <hr className='border-grayish-blue' /> : null}
             <div className='my-6'>
-              <h3 className='text-off-white hover:text-soft-orange font-bold text-xl mb-2.5'>
-                {article.title}
-              </h3>
+              <Link to={`article/${article.title}`}>
+                <h3 className='text-off-white hover:text-soft-orange font-bold text-xl mb-2.5'>
+                  {article.title}
+                </h3>
+              </Link>
               <p className='text-grayish-blue'>{article.brief}</p>
             </div>
           </React.Fragment>

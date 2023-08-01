@@ -1,4 +1,5 @@
 import { type V2_MetaFunction } from "@remix-run/node";
+import { Link } from "@remix-run/react";
 import Header from "~/components/Header";
 import HeroNews from "~/components/HeroSection/HeroNews";
 import {
@@ -36,9 +37,11 @@ export default function Index() {
         </h3>
         <div className='flex flex-col justify-between row-start-3 xl:row-start-auto'>
           <p className='text-dark-grayish-blue'>{heroContent}</p>
-          <button className='bg-soft-red hover:bg-very-dark-blue text-off-white mt-8 px-8 py-4 w-fit text-sm font-semibold tracking-[0.5em]'>
-            READ MORE
-          </button>
+          <Link to={`article/${heroTitle}`}>
+            <button className='bg-soft-red hover:bg-very-dark-blue text-off-white mt-8 px-8 py-4 w-fit text-sm font-semibold tracking-[0.5em]'>
+              READ MORE
+            </button>
+          </Link>
         </div>
         <div className='mt-12 xl:col-span-3 grid xl:grid-cols-3'>
           {popularArticles.map((article, index) => {
@@ -53,9 +56,11 @@ export default function Index() {
                   <h2 className='text-6xl font-bold text-grayish-blue mb-4'>
                     {article.index}
                   </h2>
-                  <h3 className='font-bold text-xl mb-2 hover:text-soft-red'>
-                    {article.title}
-                  </h3>
+                  <Link to={`article/${article.title}`}>
+                    <h3 className='font-bold text-xl mb-2 hover:text-soft-red'>
+                      {article.title}
+                    </h3>
+                  </Link>
                   <p>{article.brief}</p>
                 </div>
               </div>
