@@ -3,6 +3,7 @@
 - Add temp pages for navbar
 - Mobile navbar
 - Refactor: divide into components
+- metadata, favicon
 
 ## Live demo link (hopefully it's still live):
 
