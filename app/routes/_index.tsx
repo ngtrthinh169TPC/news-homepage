@@ -1,13 +1,13 @@
 import { type V2_MetaFunction } from "@remix-run/node";
-import { Link } from "@remix-run/react";
 import Header from "~/components/Header";
-import HeroNews from "~/components/HeroSection/HeroNews";
 import {
-  heroContent,
-  heroTitle,
+  highlightedArticle,
   newArticles,
   popularArticles,
 } from "~/constants/mockData";
+import HeroHighlightArticle from "~/components/HeroSection/HeroHighlightArticle";
+import HeroNewsSection from "~/components/HeroSection/HeroNewsSection";
+import HeroPopularSection from "~/components/HeroSection/HeroPopularSection";
 
 export const meta: V2_MetaFunction = () => {
   return [
@@ -31,42 +31,9 @@ export default function Index() {
           src='images/image-web-3-mobile.jpg'
           alt='web-3-mobile'
         />
-        <HeroNews data={newArticles} />
-        <h3 className='text-4xl xl:text-6xl font-extrabold row-start-2 xl:row-start-auto'>
-          {heroTitle}
-        </h3>
-        <div className='flex flex-col justify-between row-start-3 xl:row-start-auto'>
-          <p className='text-dark-grayish-blue'>{heroContent}</p>
-          <Link to={`article/${heroTitle}`}>
-            <button className='bg-soft-red hover:bg-very-dark-blue text-off-white mt-8 px-8 py-4 w-fit text-sm font-semibold tracking-[0.5em]'>
-              READ MORE
-            </button>
-          </Link>
-        </div>
-        <div className='mt-12 xl:col-span-3 grid xl:grid-cols-3'>
-          {popularArticles.map((article, index) => {
-            return (
-              <div key={`popular-article-${index}`} className='flex mb-12'>
-                <img
-                  src={article.url}
-                  alt={`article-illust-${article.title}`}
-                  className='h-full w-28 xl:w-32 object-cover'
-                />
-                <div className='ml-8'>
-                  <h2 className='text-6xl font-bold text-grayish-blue mb-4'>
-                    {article.index}
-                  </h2>
-                  <Link to={`article/${article.title}`}>
-                    <h3 className='font-bold text-xl mb-2 hover:text-soft-red'>
-                      {article.title}
-                    </h3>
-                  </Link>
-                  <p>{article.brief}</p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <HeroNewsSection data={newArticles} />
+        <HeroHighlightArticle article={highlightedArticle} />
+        <HeroPopularSection data={popularArticles} />
       </div>
     </div>
   );
