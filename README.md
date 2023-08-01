@@ -1,6 +1,6 @@
 ## TODO:
 
-- Mobile navbar
+- Animations
 - metadata, favicon
 
 ## Live demo link (hopefully it's still live):
