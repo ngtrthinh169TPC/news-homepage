@@ -1,6 +1,6 @@
 ## TODO:
 
-- Add temp pages for navbar
+- Add outlet to navbar pages
 - Mobile navbar
 - Refactor: divide into components
 - metadata, favicon

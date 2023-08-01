@@ -2,7 +2,7 @@ import { NavLink } from "@remix-run/react";
 
 const navLinks = [
   {
-    to: "/home",
+    to: "/",
     display: "Home",
   },
   {
@@ -30,7 +30,9 @@ export default function Navbar() {
         <NavLink
           key={`navlink-${item.to}`}
           to={item.to}
-          className='hover:text-soft-orange'>
+          className={({ isActive }) =>
+            "hover:text-soft-orange" + (isActive ? " text-soft-red" : "")
+          }>
           {item.display}
         </NavLink>
       ))}
