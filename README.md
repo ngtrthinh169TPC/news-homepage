@@ -1,8 +1,3 @@
-## TODO:
-
-- Animations
-- metadata, favicon
-
 ## Live demo link (hopefully it's still live):
 
 - Vercel: [news-homepage-fawn-eta.vercel.app](news-homepage-fawn-eta.vercel.app)
