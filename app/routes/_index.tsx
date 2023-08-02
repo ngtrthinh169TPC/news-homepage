@@ -11,8 +11,8 @@ import HeroPopularSection from "~/components/HeroSection/HeroPopularSection";
 
 export const meta: V2_MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "News Homepage" },
+    { name: "description", content: "Frontend Mentor Challenge" },
   ];
 };
 
