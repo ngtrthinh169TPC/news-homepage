@@ -3,7 +3,7 @@ import type { Article } from "~/types/types";
 
 export default function HeroPopularSection(props: { data: Article[] }) {
   return (
-    <div className='mt-12 xl:col-span-3 grid xl:grid-cols-3'>
+    <div className='mt-12 xl:col-span-3 grid xl:grid-cols-3 xl:gap-8'>
       {props.data.map((article, index) => {
         return (
           <div key={`popular-article-${index}`} className='flex mb-12'>
