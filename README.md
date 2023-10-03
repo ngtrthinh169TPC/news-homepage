@@ -1,6 +1,6 @@
 ## Live demo link (hopefully it's still live):
 
-- Vercel: [news-homepage-fawn-eta.vercel.app](news-homepage-fawn-eta.vercel.app)
+- Vercel: [news-homepage-fawn-eta.vercel.app](https://news-homepage-fawn-eta.vercel.app/)
 
 ## Note:
 
